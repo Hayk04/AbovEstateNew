@@ -1,0 +1,134 @@
+/*
+Theme Name: AbovEstateTrial
+Theme URI: https://wordpress.org/themes/abovestatetrial
+Author: Abov IT
+Author URI: https://abovacademy.com
+Description: Wordpress RealEstate theme
+Tags: custom-posts, blog, theme
+Version: 1.0
+Requires at least: 6.0.0
+Tested up to: 6.0.3
+Requires PHP: 7.0
+License GNU General Public License v2 or later
+License URI: http:www.gnu.org/licenses/gpl-2.0.html/
+Text Domain: abovestatetrial
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you're learned with others.
+
+ */
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+
+.site-content{
+    margin-top: 100px;
+}
+
+.custom-logo-link{
+    display: flex;
+    align-items: center;
+}
+
+
+.custom-logo-link img{
+    max-height: 50px;
+    object-fit: contain;
+    width: auto;
+}
+
+.navbar{
+    display: flex;
+    position: relative;
+}
+
+.navbar__inner{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar__inner.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar__list{
+    padding-left: 20px;
+    list-style-type: none;
+    display: flex;
+
+}
+
+.navbar__item{
+    margin: 0 15px;
+    padding: 10px 0;
+    position: relative;
+
+}
+
+.dropdown__menu{
+    display: flex;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s linear;
+    width: 100px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #000;
+}
+
+
+.navbar__item.dropdown:hover .dropdown__menu{
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown__item{
+    color: #fff;
+    margin: 5px 0;
+}
+
+.header__form{
+    display: flex;
+    align-items: center;
+}
+
+.navbar__btn{
+    background: none;
+    border: none;
+    display: none;
+}
+
+.navbar__btn-img{
+    width: 30px;
+}
+
+@media only screen and (max-width: 994px){
+    .navbar{
+        justify-content: space-between;
+        background-color: #fff;
+    }
+    .navbar__btn{
+        display: block;
+        cursor: pointer;
+    }
+    .navbar__inner{
+        position: absolute;
+        top: 50px;
+        flex-direction: column;
+        background-color: aqua;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s linear;
+    }
+    .navbar__list{
+        flex-direction: column;
+    }
+}
